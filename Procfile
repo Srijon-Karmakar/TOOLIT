@@ -1,1 +1,1 @@
-web: gunicorn Youtubeproject.wsgi
+web: gunicorn youtubeproject.wsgi
