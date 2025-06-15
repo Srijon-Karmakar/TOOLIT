@@ -1,0 +1,62 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toolit</title>
+    <link rel="stylesheet" href="{% static 'css/youtube.css' %}"> <!-- Use static tag for CSS -->
+</head>
+<body>
+    <img src="{% static 'images/Logo.png' %}" alt="logo" class="logo"> <!-- Use static tag for logo -->
+    <div class="container">
+        <div class="left-section">
+            <div class="navigation">
+                <div class="sites">
+                    <a id="fb" href="{% url 'facebook' %}">Facebook</a> <!-- Use url tag for navigation -->
+                    <a id="insta" href="{% url 'instagram' %}">Instagram</a> <!-- Use url tag for navigation -->
+                    <a id="youtube" href="{% url 'youtube' %}">YouTube</a> <!-- Use url tag for navigation -->
+                </div>
+            </div>
+            <div class="dot"></div>
+
+            <!-- Animation trial start -->
+            <h1 class="wordCarousel">
+                <div>
+                    <ul class="flip5">
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </h1>
+            <!-- Animation trial end -->
+
+            <p class="subtitle">Video Downloader</p>
+            <p class="description">Copy the link of any social media video, paste it here,<br> and download it to your device.</p>
+        </div>
+
+        <div class="input-group">
+            <form action="{% url 'youtube' %}" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                {% comment %} <input type="text" placeholder="Paste YouTube video link"> {% endcomment %}
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div class="right-section">
+            <!-- Additional content can go here -->
+        </div>
+
+        <div class="menu">
+            <a href="">Services</a> <!-- Use url tag for navigation -->
+            <a href="{% url 'about' %}">About</a> <!-- Use url tag for navigation -->
+            <a href="{% url 'contact' %}">Contact</a> <!-- Use url tag for navigation -->
+        </div>
+    </div>
+    <!-- <img class="character" src="{% static 'images/guy2.png' %}" alt="Furry Character"> -->
+</body>
+</html>

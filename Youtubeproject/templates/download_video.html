@@ -1,0 +1,70 @@
+{% load static %} <!-- Load static template tag -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Video - Toolit</title>
+    <link rel="stylesheet" href="{% static 'css/download.css' %}"> <!-- Use static tag for CSS -->
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="{% static 'images/Logo.png' %}" alt="logo" class="logo"> <!-- Use static tag for logo -->
+            <h1>{{ title }}</h1>
+        </header>
+
+        <section class="video-details-section">
+            <table class="video-details">
+                <tr>
+                    <th id="dsc">Description</th>
+                    <td colspan="3">{{ description }}</td>
+                </tr>
+                <tr>
+                    <th id="likes">Likes</th>
+                    <td>{{ likes }}</td>
+                    <th id="dislike">Dislikes</th>
+                    <td>{{ dislikes }}</td>
+                </tr>
+                <tr>
+                    <th id="views">Views</th>
+                    <td>{{ views }}</td>
+                    <th id="duration">Duration</th>
+                    <td>{{ duration }} minutes</td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="thumbnail-cell">
+                        <img src="{{ thumb }}" alt="Thumbnail" class="thumbnail">
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="streams-section">
+            <h2>Available Streams:</h2>
+            <table class="streams">
+                <thead>
+                    <tr>
+                        <th id="res">Resolution</th>
+                        <th id="fs">File Size</th>
+                        <th id="dwn">Download</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for stream in streams %}
+                        <tr>
+                            <td>{{ stream.resolution }}</td>
+                            <td>{{ stream.file_size }}</td>
+                            <td><a href="{{ stream.video_url }}" download>Download ({{ stream.extension }})</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        <footer>
+            <a href="{% url 'youtube' %}" class="back-link">Back to YouTube Page</a>
+        </footer>
+    </div>
+</body>
+</html>

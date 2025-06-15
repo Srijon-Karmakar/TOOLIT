@@ -1,0 +1,127 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+  }
+  
+  .section {
+    height: 100vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    padding: 20px 60px;
+    opacity: 0; 
+    transform: translateY(50px); /* Start offscreen */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  /* When visible, apply animation */
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* About Section */
+  .about {
+    background: linear-gradient(135deg, #fc466b, #3f5efb);
+    background-image: url('../images/blueBg.jpg');
+    background-size: cover;  
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+    opacity: 1;
+  }
+  
+  .about .highlight {
+    background: linear-gradient(to right, #fff317, #ffa200);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .logo {
+    height: 30%; font-weight: auto;
+    position: absolute; top: -5%; left: 3%;
+    /* z-index: 100; */
+  }
+  .blurcard {
+    background-color: rgba(255, 255, 255, 0.093);
+    backdrop-filter: blur(15px);
+    height:95vh; width: 150vw;
+    border-radius: 30px;
+    border:solid 0.1rem rgba(0, 0, 0, 0.109);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    /* box-shadow: #000000bd; */
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 20px 30px;
+  }
+  /* Developers Section */
+  .developers {
+    background: #f5f5f5;
+    background-image: url('../images/blueBg.jpg');
+    background: linear-gradient(135deg, #f6f6f6, #8393e1);
+    color: #001693;
+    font-size: 40px;
+  }
+  
+  .developer-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    gap: 20px;
+    height: 50%;
+    color: blue;
+    font-size: 15px;
+    /* background-color: #fff317; */
+  }
+  
+  .card {
+    background: rgba(253, 253, 253, 0.308);
+    backdrop-filter: blur(30px);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    width: 200px;
+    opacity: 0;
+    transform: scale(0.9); /* Start smaller */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+  
+  .card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  
+  .card h3 {
+    margin: 10px 0;
+  }
+  
+  .card p {
+    color: #666;
+  }
+  
+  .card.visible {
+    opacity: 1;
+    transform: scale(1); /* Full size */
+  }
+  
+  /* Footer Section */
+  .footer {
+    background: #333;
+    background: linear-gradient(135deg, #000000, #2e3140);
+    color: white;
+    text-align: center;
+  }
+  

@@ -1,0 +1,144 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    /* background-image: url(fb_fluff.jpg); */
+    background-size: cover;  
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 170px; /* Adjust logo size */
+    position:absolute; left: 55px; top: -20px;
+}
+
+h1 {
+    font-size: 1.2rem;
+    margin: 20px 0;
+    color: #ffffff; /* Premium color */
+}
+
+/* Video Details Table Styles */
+.video-details {
+    width: 100%;
+    /* border-collapse: collapse; */
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.091); /* Slightly transparent background */
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    /* overflow: hidden;  */
+}
+
+.video-details th {
+    background-color: rgba(190, 182, 29, 0.399);
+    color: #ffffff;
+    padding: 15px;
+    text-align: left;
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    text-decoration: none;
+    
+}
+
+.video-details td {
+    padding: 15px;
+    border: 1px solid #00000000;
+    text-decoration: none;
+}
+/* #dsc{
+    border-radius: 30px 30px 0px 0px;
+}
+#likes{
+    border-radius: 0px;
+}
+#views{
+    border-radius: 0px 0px 30px 30px;
+} */
+
+.thumbnail-cell {
+    text-align: center;
+}
+
+.thumbnail {
+    width: 100%; /* Adjust as needed */
+    max-width: 400px; /* Adjust as needed */
+    height: auto;
+    border-radius: 8px; /* Rounded corners for the thumbnail */
+}
+
+/* Streams Table Styles */
+.streams {
+    width: 100%;
+    /* border-collapse: collapse; */
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent background */
+    border-radius: 8px;
+    /* overflow: hidden;  */
+    border-radius: 30px;
+    backdrop-filter: blur(15px);
+}
+
+.streams th {
+    /* background-color: rgba(237, 227, 35, 0.287); */
+    background-color: rgba(190, 182, 29, 0.399);
+    color: #fffefe;
+    padding: 5px;
+    border-radius: 30px 30px 0px 0px;
+    backdrop-filter: blur(15px);
+}
+
+.streams td {
+    padding: 15px;
+    /* border: 1px solid #fff; */
+}
+
+.streams tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.05); /* Slightly darker for even rows */
+}
+#res {
+    border-radius: 30px 0 0;
+}
+#fs {
+    border-radius: 0px 0px 0px ;
+}
+#dwn {
+    border-radius: 0px 30px 0px 0px;
+}
+
+/* Back Link Styles */
+.back-link {
+    display: inline-block;
+    margin-top: 0px;
+    padding: 10px 15px;
+    background-color: rgba(224, 214, 23, 0.417);
+    color: #ffffff;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    position: absolute; left: 45%;
+}
+
+.back-link:hover {
+    background-color: rgb(209, 0, 0);
+}
